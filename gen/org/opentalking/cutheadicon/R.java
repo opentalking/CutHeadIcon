@@ -24,10 +24,11 @@ public final class R {
     public static final class id {
         public static final int clipview=0x7f070002;
         public static final int cropImg=0x7f070003;
-        public static final int imageView=0x7f070005;
+        public static final int imageView=0x7f070006;
         public static final int layout=0x7f070000;
         public static final int ready_clip=0x7f070001;
         public static final int save=0x7f070004;
+        public static final int start_crop=0x7f070005;
     }
     public static final class layout {
         public static final int activity_clip=0x7f030000;

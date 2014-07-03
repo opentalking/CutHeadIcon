@@ -17,6 +17,7 @@ import android.graphics.Rect;
 import android.graphics.Bitmap.Config;
 import android.graphics.PorterDuff.Mode;
 import android.media.ExifInterface;
+import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
 
@@ -174,8 +175,11 @@ public class IconUtils {
 	    return Bitmap.createBitmap(bitmap, 0, 0, w, h, mtx, true);
 	}
 
-	public static void resizeIcon(Context context,String filename) {
-		String path = getFileByName(context, filename).getAbsolutePath();
+	public static Uri resizeIcon(Context context,String filename) {
+		File byNameFile = IconUtils.getFileByName(context, filename);
+		Uri pictureUri = Uri.fromFile(byNameFile);
+		String path = byNameFile.getAbsolutePath();
 		saveIconBitmap(context,filename,autoRotation(path));
+		return pictureUri;
 	}
 }
