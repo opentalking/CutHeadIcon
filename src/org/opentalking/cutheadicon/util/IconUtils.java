@@ -173,4 +173,9 @@ public class IconUtils {
 	    mtx.postRotate(degree);
 	    return Bitmap.createBitmap(bitmap, 0, 0, w, h, mtx, true);
 	}
+
+	public static void resizeIcon(Context context,String filename) {
+		String path = getFileByName(context, filename).getAbsolutePath();
+		saveIconBitmap(context,filename,autoRotation(path));
+	}
 }

@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
 			switch (requestCode) {
 			case REQEST_CODE_CAMERA:
 				Log.d("onActivityResult", "REQEST_CODE_CAMERA");
+				
 				Intent clipIntent = new Intent(this,ClipActivity.class);
 				clipIntent.putExtra("fileName", HEAD_ICON_FILENAME);
 				startActivityForResult(clipIntent,REQEST_CODE_CROP_RESULT);
